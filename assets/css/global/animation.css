@@ -1,0 +1,54 @@
+.animation {
+  animation-duration: .5s;
+}
+
+.slideIn {
+  animation-name: slideIn;
+}
+
+.slideOut {
+  animation-name: slideOut;
+  animation-fill-mode: forwards;
+}
+
+.slideInToBottom {
+  opacity: 1;
+  animation-name: slideInToBottom;
+}
+
+.slideOutToBottom {
+  animation-name: slideOutToBottom;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateX(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInToBottom {
+  from {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutToBottom {
+  to {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+section {
+  opacity: 0;
+}

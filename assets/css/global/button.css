@@ -1,0 +1,30 @@
+a.button {
+	display: block;
+	width: 45%;
+	max-width: 450px;
+	margin: .75rem auto;
+	padding: .5rem;
+	cursor: pointer;
+	border-radius: 5px;
+	background: rgba(255,255,255,0.5);
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+
+a.button,
+a.button:hover,
+a.button:active,
+a.button:visited {
+	color: white;
+}
+
+.long.button {
+	width: 80%;
+}
+
+.kakao.button {
+	color: #670000 !important;
+	background: #FFE400;
+	font-weight: 800;
+}

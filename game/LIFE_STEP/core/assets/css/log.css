@@ -1,0 +1,50 @@
+#log {
+  overflow-y: scroll;
+  width: 80%;
+  max-width: 450px;
+  margin: 1rem auto;
+  padding: 1rem .5rem 1.5rem .5rem;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  background: rgba(98,98,98,0.8);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+}
+
+#log hr {
+  animation: hrSlideIn 1s;
+}
+
+@keyframes hrSlideIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+#add-year {
+  width: 80%;
+  max-width: 450px;
+  margin: 1rem auto;
+}
+
+#add-year i {
+  display: block;
+  text-align: center;
+}
+
+#add-year canvas {
+  width: 30%;
+  margin: auto;
+  background: rgba(65,65,65,0.8);
+  border-radius: .5rem;
+}
+
+#add-year-btn {
+  width: 50%;
+  margin: 1rem auto;
+  margin-top: 0;
+  background:rgba(198,198,198,0.8);
+}

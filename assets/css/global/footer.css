@@ -1,0 +1,15 @@
+footer {
+	padding: 1rem;
+	margin-top: 3rem;
+	background: rgba(98,98,98,0.6);
+}
+
+footer div {
+	max-width: 550px;
+	margin: auto;
+}
+
+#copyright {
+	text-align: center;
+	font-size: .8rem;
+}
