@@ -1,15 +1,1 @@
-nav {
-	width: 80%;
-	max-width: 650px;
-	margin: auto;
-	padding: .5rem;
-	padding-left: 1.5rem;
-	border-radius: .5rem;
-	background: rgba(198, 198, 198, 0.5);
-	text-align: center;
-	color: #555;
-}
-
-nav a {
-	color: #555 !important;
-}
+nav{width:80%;max-width:650px;margin:auto;padding:.5rem;padding-left:1.5rem;border-radius:.5rem;background:rgba(198,198,198,0.5);text-align:center;color:#555}nav a{color:#555!important}

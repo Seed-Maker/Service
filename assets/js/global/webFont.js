@@ -1,18 +1,1 @@
-var webFontSrc = 'http://fonts.googleapis.com/earlyaccess/nanumgothic.css';
-
-if (!window.WebFont) {
-  alert("에러가 발생하여 웹 폰트를 다운로드하지 못했습니다.");
-  window.WebFont = {
-    load: function () {}
-  }
-}
-
-WebFont.load({
-  google: {
-    families: ['Droid Sans', 'Droid Serif']
-  },
-  custom: {
-      families: ['Nanum Gothic'],
-      urls: [webFontSrc]
-  }
-});
+var webFontSrc='http://fonts.googleapis.com/earlyaccess/nanumgothic.css';window.WebFont||(alert('\uC5D0\uB7EC\uAC00 \uBC1C\uC0DD\uD558\uC5EC \uC6F9 \uD3F0\uD2B8\uB97C \uB2E4\uC6B4\uB85C\uB4DC\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.'),window.WebFont={load:function(){}}),WebFont.load({google:{families:['Droid Sans','Droid Serif']},custom:{families:['Nanum Gothic'],urls:[webFontSrc]}});

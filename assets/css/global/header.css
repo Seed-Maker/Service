@@ -1,15 +1,1 @@
-header {
-	position: fixed;
-	z-index: 10;
-	width: 100%;
-	top: 0;
-	left: 0;
-	padding: .3rem;
-	border-radius: .5rem;
-	text-align: center;
-}
-
-#logo {
-	width: 45%;
-	max-width: 250px;
-}
+header{position:fixed;z-index:10;width:100%;top:0;left:0;padding:.3rem;border-radius:.5rem;text-align:center}#logo{width:45%;max-width:250px}
