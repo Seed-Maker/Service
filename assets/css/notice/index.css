@@ -1,1 +1,1 @@
-#notice-list-length{margin-top:.5rem}#notice-list{cursor:pointer}.place-holder{display:none}section li{list-style:none;display:block;width:80%;margin:1rem auto;padding:.5rem;border-radius:.5rem;font-size:1rem;text-align:left;background:rgba(198,198,198,0.8)}section li::before{content:'- '}
+#notice-list-length{margin-top:.5rem}#notice-list{cursor:pointer}.place-holder{display:none}section li{list-style:none;display:block;width:80%;margin:1rem auto;padding:.5rem;border-radius:.5rem;font-size:1rem;text-align:left;background:#d2d2d2}section li::before{content:'- '}
