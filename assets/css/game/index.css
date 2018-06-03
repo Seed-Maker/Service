@@ -1,1 +1,1 @@
-#game-section{text-align:center;margin:2rem auto}#game-section div{display:inline-block;vertical-align:top;width:30%;max-width:250px;margin:1%}#game-section div img{margin:.3rem auto;border:0;border-radius:.5rem;box-shadow:0 .25rem .5rem 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}#game-section div p{font-size:.8rem}
+#game-list{margin:auto;border:2px solid #e2e2e2;border-radius:7px;padding:1rem 0}#game-list div{display:inline-block;width:30%;max-width:150px}#game-list div img{max-width:75%;border-radius:15px}

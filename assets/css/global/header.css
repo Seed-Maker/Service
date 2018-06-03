@@ -1,1 +1,1 @@
-header{position:fixed;z-index:10;width:100%;top:0;left:0;padding:.2rem;text-align:center;border-bottom:2px solid #606060}#logo{width:12.5%;max-width:55px}
+header{background:#2e2e2e;line-height:0}#logo,#menu-btn{cursor:pointer}#logo{width:55px;margin:3px}#menu-btn{position:absolute;right:13px;top:13px;width:35px}

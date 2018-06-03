@@ -1,0 +1,1 @@
+function fetchHTTP(a,b){let c=new XMLHttpRequest;'function'!=typeof b&&(b=function(){}),c.onreadystatechange=function(){return 404==this.status?b('Error'):void(4==this.readyState&&200==this.status?b(this.responseText):b(null))},c.open('GET',a,!0),c.send()}
