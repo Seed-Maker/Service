@@ -1,1 +1,42 @@
-var moreView={};moreView.init=function(){for(var c,a=document.querySelectorAll('.before.more-view'),b=document.querySelectorAll('.after.more-view'),d=0;d<b.length;d++)b[d].style.display='none';for(d=0;d<a.length;d++)a[d].outerHTML+='<a class="center button for-more-view">\uB354\uBCF4\uAE30</a>';for(c=document.querySelectorAll('.for-more-view'),d=0;d<c.length;d++)c[d].addEventListener('click',moreView.open,!1)},moreView.open=function(){for(var a=this.parentNode.querySelectorAll('.after.more-view'),b=0;b<a.length;b++)a[b].style.display='block',window.animation&&(a[b].style.animation=animation({duration:500,'0%':{transform:translateY(30),opacity:0},'100%':{transform:translateY(0),opacity:1}}));this.style.display='none'},window.addEventListener('DOMContentLoaded',moreView.init,!1);
+var moreView = {};
+
+moreView.init = function () {
+  var beforeViews = document.querySelectorAll('.before.more-view'),
+      afterViews = document.querySelectorAll('.after.more-view'),
+      buttons,
+      i = 0;
+
+  for (; i < afterViews.length; i++) {
+    afterViews[i].style.display = 'none';
+  }
+
+  for (i = 0; i < beforeViews.length; i++) {
+    beforeViews[i].outerHTML += '<a class="center button for-more-view">더보기</a>';
+  }
+
+  buttons = document.querySelectorAll('.for-more-view');
+  for (i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', moreView.open, false);
+  }
+};
+
+moreView.open = function () {
+  var target = this.parentNode.querySelectorAll('.after.more-view');
+  for (var i = 0; i < target.length; i++) {
+    target[i].style.display = 'block';
+    if (window.animation) target[i].style.animation = animation({
+      duration: 500,
+      '0%': {
+        transform: translateY(30),
+        opacity: 0
+      },
+      '100%': {
+        transform: translateY(0),
+        opacity: 1
+      }
+    });
+  }
+  this.style.display = 'none';
+};
+
+window.addEventListener('DOMContentLoaded', moreView.init, false);

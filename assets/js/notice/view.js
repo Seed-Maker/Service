@@ -1,1 +1,29 @@
-function loadNotice(){let a=document.getElementById('title'),b=document.getElementById('description');return src='https://seed-maker.github.io/notice/docs/'+getParameterByName('key')+'.json?r='+Math.floor(1e5*Math.random()),a&&b?void fetchHTTP(src,function(c){if(c){if('Error'==c)return a.innerHTML='\uAE00\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.',b.innerHTML='\uAE00\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. 15\uCD08\uD6C4\uC5D0 \uACF5\uC9C0\uC0AC\uD56D \uB9AC\uC2A4\uD2B8\uB85C \uB3CC\uC544\uAC11\uB2C8\uB2E4.',setTimeout(function(){location.href='index.html'},1.5e5);let d=JSON.parse(c);document.querySelector('title').innerHTML='Seed Maker: '+d.title,a.innerHTML=d.title,b.innerHTML=d.description}}):setTimeout(loadNotice,500)}window.addEventListener('DOMContentLoaded',loadNotice,!1);
+function loadNotice() {
+  let title = document.getElementById('title'),
+      description = document.getElementById('description')
+      src = '/notice/docs/'
+          + getParameterByName('key')
+          + '.json?r=' + Math.floor(Math.random()*100000);
+
+  if (!title || !description) return setTimeout(loadNotice, 500);
+
+  fetchHTTP(src, function (str) {
+    if (!str) return;
+
+    if (str == 'Error') {
+      title.innerHTML = "글을 찾을 수 없습니다.";
+      description.innerHTML = "글을 찾을 수 없습니다. 15초후에 공지사항 리스트로 돌아갑니다.";
+      return setTimeout(function () {
+        location.href = 'index.html';
+      }, 150000);
+    }
+
+    let notice = JSON.parse(str);
+
+    document.querySelector('title').innerHTML = "Seed Maker: " + notice.title;
+    title.innerHTML = notice.title;
+    description.innerHTML = notice.description;
+  });
+}
+
+window.addEventListener('DOMContentLoaded', loadNotice, false);

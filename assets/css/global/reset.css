@@ -1,1 +1,27 @@
-html{font-family:"Nanum Gothic",sans-serif}::selection{background:#8dfcac}body{margin:0}p{margin:.5rem auto}img,canvas,iframe,textarea{width:100%}textarea{display:block;resize:vertical}
+html {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+*::selection {
+  background: #8dfcac;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: .5rem auto;
+}
+
+img,
+canvas,
+iframe,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  display: block;
+  resize: vertical;
+}

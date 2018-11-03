@@ -1,1 +1,15 @@
-section.profile{padding-top:2rem!important}section.profile img{position:sticky;top:1rem;max-width:450px;border-radius:9999px}section.profile p:not(.title){line-height:1.5;font-size:1.1rem}
+section.profile {
+  padding-top: 2rem !important;
+}
+
+section.profile img {
+  position: sticky;
+  top: 1rem;
+  max-width: 450px;
+  border-radius: 9999px;
+}
+
+section.profile p:not(.title) {
+  line-height: 1.5;
+  font-size: 1.1rem;
+}

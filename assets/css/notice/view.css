@@ -1,1 +1,9 @@
-#description{width:90%;max-width:550px;padding:1rem}section{border:0}
+#description {
+  width: 90%;
+  max-width: 550px;
+  padding: 1rem;
+}
+
+section {
+  border: 0;
+}

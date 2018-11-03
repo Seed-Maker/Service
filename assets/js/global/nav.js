@@ -1,1 +1,26 @@
-function openNav(){document.querySelector('nav').style.display='block'}function closeNav(){document.querySelector('nav').style.display='none'}function addEventOnMenuButton(){var a=document.getElementById('menu-btn');return a?void a.addEventListener('click',function(){var b=document.getElementsByTagName('nav')[0],c=b.style;return c.display&&'none'!=c.display?'block'==c.display?closeNav():void 0:openNav()},!1):setTimeout(addEventOnMenuButton,500)}window.addEventListener('DOMContentLoaded',function(){addEventOnMenuButton(),1020<innerWidth&&openNav()},!1);
+function openNav() {
+  document.querySelector('nav').style.display = 'block';
+}
+
+function closeNav() {
+  document.querySelector('nav').style.display = 'none';
+}
+
+function addEventOnMenuButton() {
+  var menuBtn = document.getElementById('menu-btn');
+
+  if (!menuBtn) return setTimeout(addEventOnMenuButton, 500);
+
+  menuBtn.addEventListener('click', function () {
+    var nav = document.getElementsByTagName('nav')[0],
+        css = nav.style;
+
+    if (!css.display || css.display == 'none') return openNav();
+    if (css.display == 'block') return closeNav();
+  }, false);
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  addEventOnMenuButton();
+  if (innerWidth > 1020) openNav();
+}, false);

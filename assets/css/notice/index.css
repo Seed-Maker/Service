@@ -1,1 +1,16 @@
-#notice-list{max-width:450px}#notice-list p{cursor:pointer;width:80%;margin:.75rem auto;padding:.5rem;border-radius:7px;border:2px solid #e2e2e2}section{border:0}
+#notice-list {
+  max-width: 450px;
+}
+
+#notice-list p {
+  cursor: pointer;
+  width: 80%;
+  margin: .75rem auto;
+  padding: .5rem;
+  border-radius: 7px;
+  border: 2px solid #e2e2e2;
+}
+
+section {
+  border: 0;
+}

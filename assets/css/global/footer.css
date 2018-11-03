@@ -1,1 +1,14 @@
-footer{padding:1rem;background:#2e2e2e;color:#e2e2e2;text-align:center}footer .button{width:90%!important;max-width:550px!important;background:#2e2e2e!important;color:#e2e2e2!important;border:2px solid #e2e2e2!important}
+footer {
+  padding: 1rem;
+  background: #2e2e2e;
+  color: #e2e2e2;
+  text-align: center;
+}
+
+footer .button {
+  width: 90% !important;
+  max-width: 550px !important;
+  background: #2e2e2e !important;
+  color: #e2e2e2 !important;
+  border: 2px solid #e2e2e2 !important;
+}

@@ -1,1 +1,16 @@
-function fetchHTTP(a,b){let c=new XMLHttpRequest;'function'!=typeof b&&(b=function(){}),c.onreadystatechange=function(){return 404==this.status?b('Error'):void(4==this.readyState&&200==this.status?b(this.responseText):b(null))},c.open('GET',a,!0),c.send()}
+function fetchHTTP(src, callback) {
+  let xmlhttp = new XMLHttpRequest();
+
+  if (typeof callback != 'function') callback = function () {};
+
+  xmlhttp.onreadystatechange = function() {
+    if (this.status == 404) return callback('Error');
+    if (this.readyState == 4 && this.status == 200) {
+      callback(this.responseText);
+    } else {
+      callback(null);
+    }
+  }
+  xmlhttp.open('GET', src, true);
+  xmlhttp.send();
+}
