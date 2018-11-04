@@ -1,28 +1,24 @@
 function loadNotice() {
-  let title = document.getElementById('title'),
-      description = document.getElementById('description')
+  let title = $('#title'),
+      description = $('#description')
       src = '/notice/docs/'
           + getParameterByName('key')
           + '.json?r=' + Math.floor(Math.random()*100000);
 
   if (!title || !description) return setTimeout(loadNotice, 500);
 
-  fetchHTTP(src, function (str) {
-    if (!str) return;
-
-    if (str == 'Error') {
-      title.innerHTML = "글을 찾을 수 없습니다.";
-      description.innerHTML = "글을 찾을 수 없습니다. 15초후에 공지사항 리스트로 돌아갑니다.";
-      return setTimeout(function () {
-        location.href = 'index.html';
-      }, 150000);
-    }
-
-    let notice = JSON.parse(str);
-
-    document.querySelector('title').innerHTML = "Seed Maker: " + notice.title;
+  return ajax.fetchJSON({
+    path: src
+  }).then(function (notice) {
+    $('title').innerHTML = "Seed Maker: " + notice.title;
     title.innerHTML = notice.title;
     description.innerHTML = notice.description;
+  }).catch(function () {
+    title.innerHTML = "글을 찾을 수 없습니다.";
+    description.innerHTML = "글을 찾을 수 없습니다. 15초후에 공지사항 리스트로 돌아갑니다.";
+    setTimeout(function () {
+      location.href = 'index.html';
+    }, 150000);
   });
 }
 

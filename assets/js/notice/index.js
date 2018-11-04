@@ -5,13 +5,12 @@ function loadNoticeList() {
 
   if (!noticeListElem) return setTimeout(loadNoticeList, 500);
 
-  fetchHTTP(src, function (str) {
-    if (!str) return;
+  return ajax.fetchJSON({
+    path: src
+  }).then(function (list) {
+    let p = [];
 
-    let list = JSON.parse(str),
-        p = [];
-
-    document.getElementById('notice-length').innerHTML = list.length;
+    $('#notice-length').innerHTML = list.length;
     noticeListElem.innerHTML = null;
 
     for (let i = 0; i < list.length; i++) {

@@ -21,6 +21,11 @@ function addEventOnMenuButton() {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-  addEventOnMenuButton();
-  if (innerWidth > 1020) openNav();
+  ajax.fetch({
+    path: '/home/assets/html/global/nav.html'
+  }).then(function (response) {
+    $('nav').innerHTML = response;
+    addEventOnMenuButton();
+    if (innerWidth > 1020) openNav();
+  });
 }, false);

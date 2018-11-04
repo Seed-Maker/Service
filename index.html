@@ -19,8 +19,12 @@
 
 		<link rel="stylesheet" href="/home/assets/css/index/index.css">
 
+		<script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"></script>
 		<script async src="/home/assets/js/global/checkBrowser.js"></script>
+		<script src="/api/js/query.js"></script>
+		<script src="/api/js/ajax.js"></script>
 		<script src="/home/assets/js/global/nav.js"></script>
+		<script src="/home/assets/js/global/footer.js"></script>
 	</head>
 	<body>
 		<header>
@@ -30,26 +34,7 @@
 			<img id="menu-btn" src="/home/img/header/iconmonstr-menu-2-240.png" alt="메뉴버튼">
 		</header>
 
-		<nav>
-			<div>
-				<a href="/home">홈</a>
-			</div>
-			<div>
-				<a href="/home/game">게임</a>
-			</div>
-			<div>
-				<a href="/home/introduce">팀원 소개</a>
-			</div>
-			<div>
-				<a href="/home/notice">공지사항</a>
-			</div>
-			<div>
-				<a href="/home/dataroom">자료실</a>
-			</div>
-			<div>
-				<a href="/home/bug">버그 / 악용제보</a>
-			</div>
-		</nav>
+		<nav></nav>
 
 		<article>
 			<section id="main">
@@ -76,10 +61,10 @@
 					<a href="/home/game" class="button">자세히 보기</a>
 				</div>
 				<div id="game-list" class="center half">
-					<a href="/home/game/LIFE-STEP">
+					<a href="/home/game/day-of-tower">
 						<div>
-							<img class="shadow" src="/home/img/game/LIFE_STEP/logo.png" alt="라이프 스텝 로고">
-							<p>LIFE-STEP</p>
+							<img class="shadow" src="/day-of-tower/assets/image/iOS/icon.png" alt="데이 오브 타워 로고">
+							<p>Day of tower</p>
 						</div>
 					</a>
 				</div>
@@ -115,14 +100,6 @@
 			</section>
 		</article>
 
-		<footer>
-			<p id="copyright">
-				Copyright 2018. 'Seed Maker' All rights reserved. <br><br>
-				WebDeveloper: tmdgus0084@naver.com
-			</p>
-			<a class="button" href="/home">홈으로</a>
-			<a class="button" href="/home/bug">버그 /  문제 제보</a>
-			<a class="button" href="https://github.com/Seed-Maker/web-page" target="_blank">GitHub</a>
-		</footer>
+		<footer></footer>
 	</body>
 </html>
