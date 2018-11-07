@@ -4,7 +4,7 @@
 */
 
 function setDisplayHowTo(property) {
-  document.getElementById('how-to-play').style.display = property;
+  $('#how-to-play').style.display = property;
 }
 
 var user = {};
@@ -17,7 +17,7 @@ user.focus.coord = [7, 7];
 
 //사용자가 착수를 원하는 지점을 화면에 표시해줄 함수.
 user.focus.set = function () {
-  var board = game.getCanvas(),
+  let board = game.getCanvas(),
       ctx = board.ctx,
       x = board.padding + board.blockWidth * user.focus.coord[0],
       y = board.padding + board.blockWidth * user.focus.coord[1],
@@ -60,16 +60,16 @@ user.set = function () {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('stone-color-select'),
-      ternAlert = document.getElementById('turn-alert');
+  let form = $('#stone-color-select'),
+      ternAlert = $('#turn-alert');
 
   //착수 지점을 7,7로 초기화한다.
   user.focus.set(7,7);
 
   //착수 버튼에 클릭이벤트로 user.set을 부여한다.
-  document.getElementById('set-btn').addEventListener('click', user.set, false);
+  $('#set-btn').addEventListener('click', user.set, false);
 
-  document.getElementById('select-white').addEventListener('click', function () {
+  $('#select-white').addEventListener('click', function () {
     user.color = WHITE;
     form.style.display = 'none';
     ternAlert.style.display = 'block';
@@ -77,13 +77,13 @@ window.addEventListener('DOMContentLoaded', function () {
     user.focus.set();
   }, false);
 
-  document.getElementById('select-black').addEventListener('click', function () {
+  $('#select-black').addEventListener('click', function () {
     user.color = BLACK;
     form.style.display = 'none';
     ternAlert.style.display = 'block';
   }, false);
 
-  let check = function () {
+  function check() {
     if (user.focus.coord[1] < 0) user.focus.coord[1] = 0;
     if (user.focus.coord[0] < 0) user.focus.coord[0] = 0;
     if (user.focus.coord[1] > 14) user.focus.coord[1] = 14;
@@ -91,22 +91,22 @@ window.addEventListener('DOMContentLoaded', function () {
     user.focus.set();
   }
 
-  document.getElementById('move-up-btn').addEventListener('click', function () {
+  $('#move-up-btn').addEventListener('click', function () {
     user.focus.coord[1]--;
     check();
   }, false);
 
-  document.getElementById('move-down-btn').addEventListener('click', function () {
+  $('#move-down-btn').addEventListener('click', function () {
     user.focus.coord[1]++;
     check();
   }, false);
 
-  document.getElementById('move-left-btn').addEventListener('click', function () {
+  $('#move-left-btn').addEventListener('click', function () {
     user.focus.coord[0]--;
     check();
   }, false);
 
-  document.getElementById('move-right-btn').addEventListener('click', function () {
+  $('#move-right-btn').addEventListener('click', function () {
     user.focus.coord[0]++;
     check();
   }, false);

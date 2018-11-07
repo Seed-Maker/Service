@@ -10,7 +10,7 @@ const EMPTY = 0,
 
 //캔버스 요소를 사용하기 편한 형태로 리턴하는 함수.
 game.getCanvas = function () {
-  var board = document.getElementById('board');
+  let board = document.getElementById('board');
   if (!board) return {elem:null};
   return {
     elem: board,
@@ -30,9 +30,9 @@ game.stone.list = [];
 
 //바둑돌들의 위치를 모두 초기화할 함수.
 game.stone.reset = function () {
-  for (var i = 0; i < 15; i++) {
+  for (let i = 0; i < 15; i++) {
     game.stone.list[i] = [];
-    for (var j = 0; j < 15; j++)
+    for (let j = 0; j < 15; j++)
       game.stone.list[i][j] = EMPTY;
   }
 }
@@ -50,7 +50,7 @@ game.stone.set = function (color, x, y) {
 
 //저장된 바둑돌에 위치에 따라 캔버스를 다시 그려내는 함수.
 game.stone.update = function () {
-  var board = game.getCanvas(),
+  let board = game.getCanvas(),
       ctx = board.ctx,
       r = board.width / 35,
       color,
@@ -58,8 +58,8 @@ game.stone.update = function () {
       y;
 
   game.drawBoard();/*drawBoard함수는 drawBoard.js에서 정의된다.*/
-  for (var i = 0; i < 15; i++) {
-    for (var j = 0; j < 15; j++) {
+  for (let i = 0; i < 15; i++) {
+    for (let j = 0; j < 15; j++) {
       if (!game.stone.list[i][j]) continue;
 
       color = game.stone.list[i][j];
@@ -92,7 +92,7 @@ game.checkWin = function () {
     모든 돌 (stone.list[x][y])의 색이 x 축 또는 y 축 또는 대각선으로
     같은 색 5개가 동일하게 놓여있다면 승리다.
   */
-  var color, x, y, k, l;
+  let color, x, y, k, l;
   for (x = 0; x < 15; x++) {
     for (y = 0; y < 15; y++) {
       if (!game.stone.list[x][y]) continue;
@@ -121,10 +121,13 @@ game.checkWin = function () {
 }
 
 //AI의 테스트를 위해, AI vs AI 대결을 시키는 함수.
-game.AIvsAI = function () {
+game.AIvsAI = async function () {
   game.stone.reset();
-  var i = 0;
+  let i = 0;
   while (!game.checkWin()) {
+    await new Promise(resolve =>  {
+      setTimeout(resolve, 50);
+    });
     game.stone.set(i + 1, ...AI(i + 1, game.stone.list));
     i = 1 - i;
   }
