@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="게임 개발 팀, 시드메이커입니다.">
+
+		<title>Seed Maker: AI-Omok</title>
+
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+		<script src="/home/assets/js/global/webFont.js"></script>
+
+		<link rel="stylesheet" href="/home/assets/css/global/reset.css">
+		<link rel="stylesheet" href="/home/assets/css/global/header.css">
+		<link rel="stylesheet" href="/home/assets/css/global/nav.css">
+		<link rel="stylesheet" href="/home/assets/css/global/article.css">
+		<link rel="stylesheet" href="/home/assets/css/global/footer.css">
+		<link rel="stylesheet" href="/home/assets/css/global/button.css">
+
+		<link rel="stylesheet" href="/home/assets/css/game/profie.css">
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"></script>
+		<script async src="/home/assets/js/global/checkBrowser.js"></script>
+		<script src="/api/js/query.js"></script>
+		<script src="/api/js/ajax.js"></script>
+		<script src="/home/assets/js/global/nav.js"></script>
+		<script src="/home/assets/js/global/footer.js"></script>
+		<script src="/home/assets/js/global/animation.js"></script>
+		<script src="/home/assets/js/global/moreView.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="/home">
+				<img id="logo" src="/home/img/header/icon.png" alt="시드메이커 로고">
+			</a>
+			<img id="menu-btn" src="/home/img/header/iconmonstr-menu-2-240.png" alt="메뉴버튼">
+		</header>
+
+    <nav></nav>
+
+		<article>
+			<section class="center">
+        <p class="title">인공지능 오목</p>
+				<img class="container" src="/home/img/game/ai-omok/play.png" alt="오목 로고">
+        <a href="https://seed-maker.github.io/ai-omok" class="center button">게임 시작</a>
+			</section>
+
+			<section class="center">
+        <p class="title">게임 소개</p>
+        <p>
+					인공지능과의 오목 대결!
+				</p>
+				<p>
+					이 게임은 <b>안중고등학교 알고리즘 동아리</b>와
+					시드메이커의 협동 개발 게임입니다.<br>
+					(아직 개발이 진행중인 게임으로, 인공지능의 성능이 다소 부족할 수 있습니다.)
+				</p>
+      </section>
+
+      <section>
+        <p class="title">개발진 소개</p>
+        <p class="center">
+					4명의 개발진이 하는 이야기를 들어보세요.<br>
+					(시드메이커 팀원이 아닐 경우 이름이 <i>이탤릭체</i>로 작성됨.)
+				</p>
+      </section>
+
+      <section class="center profile">
+        <p class="title">황승현</p>
+        <p class="center">프로그래밍 및 그래픽 처리</p>
+        <div class="half autoMargin">
+          <img class="box" src="/home/img/introduce/profile/HSH.jpg" alt="황승현 프로필 사진">
+        </div>
+        <div class="left half autoMargin">
+					<div class="before more-view">
+						<p>
+							<b>안녕하세요.</b><br>
+							게임 프로그래밍을 맡은 <b>황승현</b>입니다.
+						</p>
+					</div>
+					<div class="after more-view">
+						<p>
+							이번 프로젝트는 <b>안중고등학교 알고리즘 동아리</b>와
+							협력하여 제작한 인공지능 오목 게임입니다.
+						</p>
+						<p>
+							수많은 알고리즘으로 무장한 인공지능과
+							오목 대결은 쉽지 않을 것 입니다.
+						</p>
+						<p>
+							C언어로 작성된 코드를 원하시면
+							<a href="https://github.com/AJ-Algorithm-Club/c-omok">여기</a>를,
+							웹 기술(HTML, CSS, JavaScript)로 작성된
+							코드를 원하신다면
+							<a href="https://github.com/Seed-Maker/ai-omok">여기</a>를
+							클릭하여 주시기 바랍니다.
+						</p>
+						<p>
+							게임에 관심을 가지고 즐겨주셔서 감사합니다.
+						</p>
+					</div>
+        </div>
+      </section>
+
+			<section class="center profile">
+        <p class="title"><i>이경익</i></p>
+        <p class="center">프로그래밍</p>
+        <div class="half autoMargin">
+          <img class="box" src="/home/img/introduce/profile/aj/LKY.jpeg" alt="이경익 프로필 사진">
+        </div>
+        <div class="left half autoMargin">
+					<div class="before more-view">
+						<p>
+							<b>안녕하세요.</b><br>
+							알고리즘을 맡은 <b>이경익</b>입니다.
+						</p>
+					</div>
+					<div class="after more-view">
+						<p>
+							저는 평소 GIS 기술과 4차 산업혁명에
+							관심이 많아 관련 자료를 수집하는 것이 취미입니다.
+						</p>
+						<p>
+							올해 학교 프로그래밍 수업에서 C언어를 배우기 시작했습니다.
+							이 과정에서 같은 반 친구 승현이한테 도움을 받으면서
+							프로그래밍에 흥미를 가지게 되었고,
+							관련 동아리 활동을 하면서 이 프로젝트에 참여하게 되었습니다.
+						</p>
+						<p>
+							사실은 머릿속으로 상상하는 것과 이를
+							실제로 구현하는 것 사이의 간극 때문에
+							프로그래밍 초반에는 많이 힘들었습니다.
+							프로그래밍을 올해 처음으로 시작하기도 했고,
+							또 알고리즘을 생각하는 과정이 익숙하지 않아서
+							개발하는 데 어려움이 많았습니다.
+						</p>
+						<p>
+							부족한 점이 많아서 앞으로도
+							다른 분들의 도움을 받는 일이 많겠지만,
+							이번 프로젝트를 통해 피드백을 받으면서
+							프로그래밍 실력을 닦고 성장하는 기회로 삼겠습니다.
+						</p>
+						<p>
+							아울러 프로젝트에서 제공되는
+							게임이 여러분들께 유익하고 재미있는
+							추억으로 간직되기를 희망합니다.
+						</p>
+						<p>
+							감사합니다.
+						</p>
+					</div>
+        </div>
+      </section>
+
+			<section class="center profile">
+        <p class="title"><i>이윤석</i></p>
+        <p class="center">프로그래밍</p>
+        <div class="half autoMargin">
+          <img class="box" src="/home/img/introduce/profile/default.png" alt="이윤석 프로필 사진">
+        </div>
+				<div class="left half autoMargin">
+					<p>
+						<b>안녕하세요.</b><br>
+						알고리즘을 맡은 <b>이윤석</b>입니다.
+					</p>
+				</div>
+      </section>
+
+			<section class="center profile">
+        <p class="title"><i>김효빈</i></p>
+        <p class="center">프로그래밍</p>
+        <div class="half autoMargin">
+          <img class="box" src="/home/img/introduce/profile/default.png" alt="김효빈 프로필 사진">
+        </div>
+				<div class="left half autoMargin">
+					<p>
+						<b>안녕하세요.</b><br>
+						알고리즘을 맡은 <b>김효빈</b>입니다.
+					</p>
+				</div>
+      </section>
+
+			<div id="disqus_thread" class="container"></div>
+			<script async src="/home/assets/js/global/disqus.js"></script>
+		</article>
+
+		<footer></footer>
+	</body>
+</html>
